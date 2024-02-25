@@ -4,8 +4,13 @@ from test_framework import generic_test
 
 
 def plus_one(A: List[int]) -> List[int]:
-    # TODO - you fill in here.
-    return []
+    max_pow = len(A) - 1
+    num = 0
+    for d in A:
+        num += d * 10**max_pow
+        max_pow -= 1
+    num += 1
+    return [int(d) for d in str(num)]
 
 
 if __name__ == '__main__':

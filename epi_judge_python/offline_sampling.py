@@ -1,4 +1,5 @@
 import functools
+from random import randint
 from typing import List
 
 from test_framework import generic_test
@@ -9,7 +10,10 @@ from test_framework.test_utils import enable_executor_hook
 
 
 def random_sampling(k: int, A: List[int]) -> None:
-    # TODO - you fill in here.
+    for i in range(len(A)):
+        swap_idx = randint(0, len(A) - 1)
+        A[i], A[swap_idx] = A[swap_idx], A[i]
+
     return
 
 
